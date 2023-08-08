@@ -14,5 +14,9 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-#echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+wget https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
+unzip master.zip
+mv ./OpenClash-master/luci-app-openclash ./package/
+rm -rf ./OpenClash-master/
